@@ -1,5 +1,4 @@
 from ase.calculators.calculator import (Calculator, all_changes, PropertyNotImplementedError)
-from ase.calculators.emt import EMT
 from espresso import Espresso
 from .fp_calculator import set_sym, calculate_fp
 import torch

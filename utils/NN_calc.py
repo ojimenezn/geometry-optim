@@ -20,7 +20,8 @@ class NN_Calc(Calculator):
         Calculator.calculate(self, atoms, properties, system_changes)
 
         temp_atoms = self.atoms.copy()
-        temp_atoms.set_calculator(Espresso(pw=500.0, calculation='scf', kpts=(4,4,1), xc='PBE'))
+        #temp_atoms.set_calculator(Espresso(pw=500.0, calculation='scf', kpts=(4,4,1), xc='PBE'))
+        temp_atoms.set_calculator(EMT())
 
         # calculate fingerprints and preprocessing
         image_data = calculate_fp(temp_atoms, self.elements, self.params_set)

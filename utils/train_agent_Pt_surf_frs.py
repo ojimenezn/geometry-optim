@@ -124,7 +124,7 @@ class Agent(object):
 				test_b_dnrg_dfp = torch.autograd.grad(test_nrg_pre_cluster, test_b_fp, grad_outputs=torch.ones_like(test_nrg_pre_cluster), 
 											   create_graph=True, retain_graph=True)[0].reshape(test_n_clusters, 1, -1)
 				test_force_pre = - torch.bmm(test_b_dnrg_dfp, test_b_dfpdX).reshape(test_n_clusters,test_n_atoms,3)
-				test_force_mae = sum_l1(test_force_pre[:, 18:, :], test_force_label[:, 18:, :]) / test_nrg_pre_atom.size(0) / 18 / 3
+				test_force_mae = sum_l1(test_force_pre[:, 8:, :], test_force_label[:, 8:, :]) / test_nrg_pre_atom.size(0) / 8 / 3
 
 			with open(log_name, 'a') as file:
 				file.write(f'test: epoch: -1, nrg_mae: {test_nrg_mae*1000} meV/atom, force_mae: {test_force_mae*1000} meV/AA\r\n')
@@ -143,7 +143,7 @@ class Agent(object):
 					train_b_dnrg_dfp = torch.autograd.grad(train_nrg_pre_cluster, train_b_fp, grad_outputs=torch.ones_like(train_nrg_pre_cluster),
 												create_graph=True, retain_graph=True)[0].reshape(train_n_clusters, 1, -1)
 					train_force_pre = - torch.bmm(train_b_dnrg_dfp, train_b_dfpdX).reshape(train_n_clusters, train_n_atoms, 3)
-					train_force_loss = mse(train_force_pre[:, 18:, :], train_force_label[:, 18:, :]) * force_coef
+					train_force_loss = mse(train_force_pre[:, 8:, :], train_force_label[:, 8:, :]) * force_coef
 					train_loss += train_force_loss
 				else:
 					train_force_loss = 0
@@ -163,8 +163,8 @@ class Agent(object):
 					valid_b_dnrg_dfp = torch.autograd.grad(valid_nrg_pre_cluster, valid_b_fp, grad_outputs=torch.ones_like(valid_nrg_pre_cluster), 
 									   create_graph=True, retain_graph=True)[0].reshape(valid_n_clusters, 1, -1)
 					valid_force_pre = - torch.bmm(valid_b_dnrg_dfp, valid_b_dfpdX).reshape(valid_n_clusters,valid_n_atoms,3)
-					valid_force_mae = sum_l1(valid_force_pre[:, 18:, :], valid_force_label[:, 18:, :]) / 18 / valid_n_clusters / 3
-					valid_force_max = torch.abs(valid_force_pre[:, 18:, :] - valid_force_label[:, 18:, :]).max()
+					valid_force_mae = sum_l1(valid_force_pre[:, 8:, :], valid_force_label[:, 8:, :]) / 8 / valid_n_clusters / 3
+					valid_force_max = torch.abs(valid_force_pre[:, 8:, :] - valid_force_label[:, 8:, :]).max()
 				else:
 					valid_force_mae = 0
 					valid_force_max = 0
@@ -182,7 +182,7 @@ class Agent(object):
 						test_b_dnrg_dfp = torch.autograd.grad(test_nrg_pre_cluster, test_b_fp, grad_outputs=torch.ones_like(test_nrg_pre_cluster), 
 													   create_graph=True, retain_graph=True)[0].reshape(test_n_clusters, 1, -1)
 						test_force_pre = - torch.bmm(test_b_dnrg_dfp, test_b_dfpdX).reshape(test_n_clusters,test_n_atoms,3)
-						test_force_mae = sum_l1(test_force_pre[:, 18:, :], test_force_label[:, 18:, :]) / 18 / test_n_clusters / 3
+						test_force_mae = sum_l1(test_force_pre[:, 8:, :], test_force_label[:, 8:, :]) / 8 / test_n_clusters / 3
 					else:
 						test_force_mae = 0
 
@@ -223,7 +223,7 @@ class Agent(object):
 			b_dnrg_dfp = torch.autograd.grad(nrg_pre_cluster, test_b_fp, grad_outputs=torch.ones_like(nrg_pre_cluster), 
 										   create_graph=True, retain_graph=True)[0].reshape(test_n_clusters, 1, -1)
 			force_pre = - torch.bmm(b_dnrg_dfp, test_b_dfpdX).reshape(test_n_clusters, test_n_atoms, 3)
-			force_mae = sum_l1(test_force_pre[:, 18:, :], test_force_label[:, 18:, :]) / 19 / test_n_clusters / 3
+			force_mae = sum_l1(test_force_pre[:, 8:, :], test_force_label[:, 8:, :]) / 9 / test_n_clusters / 3
 		else:
 			force_pre = 0
 			force_mae = 0

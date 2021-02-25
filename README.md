@@ -1,2 +1,2 @@
 # Simple-NN-BP-FP
-Behler-Parrinello (https://doi.org/10.1063/1.3553717) fingerprint module written in C++ from SIMPLE-NN package (https://github.com/MDIL-SNU/SIMPLE-NN). Most of the original code is modified from https://github.com/yilinyang1/Simple-NN-BP-FP.
+Behler-Parrinello (https://doi.org/10.1063/1.3553717) fingerprint module written in C++ from SIMPLE-NN package (https://github.com/MDIL-SNU/SIMPLE-NN). Most of the code is modified from https://github.com/yilinyang1/Simple-NN-BP-FP.

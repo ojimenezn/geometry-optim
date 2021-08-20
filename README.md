@@ -8,12 +8,6 @@ This repository contains Python code to run ML-based geometry optimizations in m
 
 The above workflow from our [recently published work](https://doi.org/10.1063/5.0049665) is essentially identical to the one available in the Colab notebook, with the only exception that the latter uses an [Effective Medium Theory (EMT)](https://doi.org/10.1119/1.12734) potential in place of computationally expensive quantum chemical (DFT) calculations (most DFT engines are also not open source). 
 
-## Adsorption Site Clustering with UMAP and TSNE (Google Colab Notebook)
-<div align="center">
-<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/clustering.png" alt="logo"></img>
-</div>
-This notebook contains code that automatically generates and processes a dataset of atomic environment fingerprints (features) and equilibrium adsorption energies (labels), which are then used as input in clustering algorithms (UMAP, T-SNE) to identify adsorption space regions. 
-
 ## Citing
 If you find this code or work useful in any way, please go to [repo](https://github.com/yilinyang1/NN-ensemble-relaxer) for more detailed information and consider citing our paper:
 ```

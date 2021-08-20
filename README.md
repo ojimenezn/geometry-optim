@@ -10,7 +10,7 @@ The above workflow from our [recently published work](https://doi.org/10.1063/5.
 
 ## Adsorption Site Clustering with U-Map (Google Colab Notebook)
 <div align="center">
-<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/umap.png" alt="logo"></img>
+<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/clustering.png" alt="logo"></img>
 </div>
 
 ## Citing

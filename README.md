@@ -6,10 +6,12 @@ This repository contains code to run ML-based geometry optimizations in molecula
 <img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/al-relaxation.png" alt="logo"></img>
 </div>
 
-The above workflow from our [recently published work](https://doi.org/10.1063/5.0049665) is essentially identical to the one available in the Colab notebook, with the only exception that the latter uses an [Effective Medium Theory (EMT)](https://doi.org/10.1119/1.12734) to reduce the computational cost of quantum chemical (DFT) calculations (most DFT engines are also not open source). 
+The above workflow from our [recently published work](https://doi.org/10.1063/5.0049665) is essentially identical to the one available in the Colab notebook, with the only exception that the latter uses an [Effective Medium Theory (EMT)](https://doi.org/10.1119/1.12734) to reduce the computational cost represented by quantum chemical (DFT) calculations (most DFT engines are also not open source). 
 
 ## Adsorption Site Clustering with U-Map (Google Colab Notebook)
-
+<div align="center">
+<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/umap.png" alt="logo"></img>
+</div>
 
 ## Citing
 If you find this code or work useful in any way, please consider citing our paper:

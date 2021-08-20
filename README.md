@@ -3,7 +3,7 @@ This repository contains code to run ML-based geometry optimizations in molecula
 
 ## Active Learning-based Geometry Optimization (Google Colab Notebook)
 <div align="center">
-<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/al-relaxation.png" alt="logo"></img>
+<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/al-relax.png" alt="logo"></img>
 </div>
 
 The above workflow from our [recently published work](https://doi.org/10.1063/5.0049665) is essentially identical to the one available in the Colab notebook, with the only exception that the latter uses an [Effective Medium Theory (EMT)](https://doi.org/10.1119/1.12734) potential in place of computationally expensive quantum chemical (DFT) calculations (most DFT engines are also not open source). 

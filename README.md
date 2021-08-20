@@ -3,7 +3,7 @@ This repository contains code to run ML-based geometry optimizations in molecula
 
 ## Active Learning-based Geometry Optimization (Google Colab Notebook)
 <div align="center">
-<img src="https://raw.githubusercontent.com/ojimenezn/optim-clustering/images/al-relaxation.png" alt="logo"></img>
+<img src="https://github.com/ojimenezn/optim-clustering/blob/master/images/al-relaxation.png" alt="logo"></img>
 </div>
 
 ## Adsorption Site Clustering with U-Map (Google Colab Notebook)

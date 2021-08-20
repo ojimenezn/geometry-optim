@@ -14,7 +14,7 @@ The above workflow from our [recently published work](https://doi.org/10.1063/5.
 </div>
 
 ## Citing
-If you find this code or work useful in any way, please consider citing our paper:
+If you find this code or work useful in any way, please go to [repo](https://github.com/yilinyang1/NN-ensemble-relaxer) for more detailed information and consider citing our paper:
 ```
 @Article{citekey,
   author  = "Yilin Yang and Omar A. Jiménez-Negrón and John R. Kitchin",

@@ -10,7 +10,7 @@ This
 If you find this code or work useful in any way, please consider citing our paper:
 ```
 @Article{citekey,
-  author  = "Yilin Yang and Omar A. Jiménez-Negrón and John R. Kitchin`",
+  author  = "Yilin Yang and Omar A. Jiménez-Negrón and John R. Kitchin",
   title   = "Machine-learning accelerated geometry optimization in molecular simulation",
   journal = "Journal of Chemical Physics",
   year    = "2021",

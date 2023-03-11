@@ -52,6 +52,8 @@ class NN_Calc(Calculator):
         for model in self.models_list:
             image_nrg_pre_raw = model(image_fp)  # [N_atoms, N_elements]
             image_nrg_pre_cluster = torch.sum(image_nrg_pre_raw * image_e_mask)  # [N_atoms]
+            print("image_nrg_pre_cluster: ", image_nrg_pre_cluster)
+            print("image_fp: ", image_fp)
             image_b_dnrg_dfp = torch.autograd.grad(image_nrg_pre_cluster, image_fp,
                                                    create_graph=True, retain_graph=True)[0].reshape(1, -1)
 

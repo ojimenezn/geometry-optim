@@ -135,9 +135,17 @@ class Agent(object):
 			def closure():
 				self.optimizer.zero_grad()
 				train_nrg_pre_raw = self.model(train_b_fp)  # [n_cluster, n_atoms, n_elements]
+				print("train_nrg_pre_raw", train_nrg_pre_raw)
 				train_nrg_pre_atom = torch.sum(train_nrg_pre_raw * self.train_data['b_e_mask'], dim=2)
+				print("train_nrg_pre_atom", train_nrg_pre_atom)
 				train_nrg_pre_cluster = torch.sum(train_nrg_pre_atom, dim=1)
+				print("train_nrg_pre_cluster", train_nrg_pre_cluster)
+				print("train_actual_atoms", train_actual_atoms)
+				print("train_nrg_label_cluster", train_nrg_label_cluster)
+				print("nrg_coef:", nrg_coef)
 				train_loss = mse(train_nrg_pre_cluster/train_actual_atoms, train_nrg_label_cluster/train_actual_atoms) * nrg_coef
+				print("train_loss", train_loss)
+				print("train_b_fp", train_b_fp)
 
 				if is_force:
 					train_b_dnrg_dfp = torch.autograd.grad(train_nrg_pre_cluster, train_b_fp, grad_outputs=torch.ones_like(train_nrg_pre_cluster),
